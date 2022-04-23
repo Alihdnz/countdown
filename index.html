@@ -6,43 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="app.js"></script>
     <link rel="stylesheet" href="elements.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     
     <title>countdown</title>
 </head>
 <body>
 
-    <div class="countdownContainer flex itens center column">
-    
-        <h1>Ready to launch in...</h1>
 
-        <div class="container flex row">
-
-            <div class="item containerDays flex column itens center">
-                <span>Dias</span>
-                <div id="days"></div>
-            </div>
-            
-            <div class="item containerHours flex column itens center">
-                <span>Horas</span>
-                <div id="hours"></div>
-            </div>
-        
-            <div class="item containerMinutes flex column itens center">
-                <span>Minutos</span>
-                <div id="minutes"></div>
-            </div>
-            
-            <div class="item containerSeconds flex column itens center">
-                <span>Segundos</span>
-                <div id="seconds"></div>
-            </div>  
+    <div class="topImage"></div>
+    <div id="modalContainer" class="modalContainer flex itens content center"> 
     
+    <div class="modal">
+        <a id="closeModal" onclick="switchModal()" href="#"> close</a>
+        <form class="flex itens content center column">
+            <input class="input" type="text" placeholder="Name">
+            <input class="input" type="email" placeholder="Your best e-mail">
+            <button class="button">Enviar</button>
+        </form>
+    </div>
+    </div>
+
+    <div class="container flex itens content center">
+        <div class="countdownContainer flex itens center column">
         
+            <h1>Ready to launch in...</h1>
+
+            <div class="section flex row">
+
+                <div class="item containerDays flex itens center column">
+                    <span>Dias</span>
+                    <div id="days"></div>
+                    
+                </div>
+                
+                <div class="item containerHours flex itens center column">
+                    <span>Horas</span>
+                    <div id="hours"></div>
+                </div>
+            
+                <div class="item containerMinutes flex itens flex-end column">
+                    <span>Minutos</span>
+                    <div id="minutes"></div>
+                </div>
+                
+                <div class="item containerSeconds flex itens flex-end column">
+                    <span>Segundos</span>
+                    <div id="seconds"></div>
+                </div>  
+        
+            
+            </div>
+
+            <p>Inscreva-se para saber mais sobre o lançamento</p>
+
+            <button  id="subscribeButton" onclick="switchModal()" class="button">Inscreva-se</button>
         </div>
 
-        <p>Inscreva-se para saber mais sobre o lançamento</p>
-
-        <button class="button">Inscreva-se</button>
+         <img class="rocket" src="./images/rocket.svg" alt="rocket">
     </div>
+    <div class="bottomImage"></div>
+
+
 </body>
 </html>

@@ -22,12 +22,11 @@ var interval =  setInterval(function(){
     //output the result in an elemente with id="countdown"
 
 
-        document.getElementById("days").innerHTML = ( "00" + days ).slice(-2);
-        document.getElementById("hours").innerHTML = ( "00" + hours ).slice(-2) ;
-        document.getElementById("minutes").innerHTML = ( "00" + minutes ).slice(-2);
-        document.getElementById("seconds").innerHTML = ( "00" + seconds ).slice(-2);
+        document.getElementById("days").innerHTML =  ( "00" + days ).slice(-2) ;
+        document.getElementById("hours").innerHTML = " : " + ( "00" + hours ).slice(-2);
+        document.getElementById("minutes").innerHTML = " : " +  ( "00" + minutes ).slice(-2);
+        document.getElementById("seconds").innerHTML = " : " + ( "00" + seconds ).slice(-2);
 
-        ("0000" + this.value).slice(-4)
 
     // if the count down is over, write some text
 
@@ -38,3 +37,12 @@ var interval =  setInterval(function(){
     // }
 
 }, 1000)
+
+
+
+//modal controller
+
+function switchModal() {
+
+    document.getElementById("modalContainer").classList.toggle("active");
+}

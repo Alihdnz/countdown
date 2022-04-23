@@ -1,0 +1,152 @@
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+      --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+  }
+
+  * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+  }
+
+  .topImage {
+    position: absolute;
+    width: 1680px;
+    height: 164px;
+    left: 0px;
+    top: 0px;
+	background: url(./images/top-image.svg) center no-repeat;
+	background-size: contain;
+	color: transparent;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+    z-index: -99;
+  }
+  .bottomImage {
+    position: absolute;
+    width: 1680px;
+    height: 285px;
+    left: 0px;
+    bottom: 0px;
+	background: url(./images/bottom-image.svg) center no-repeat;
+	background-size: contain;
+	color: transparent;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+    z-index: -99;
+  }
+
+  .rocket {
+    width: 607px;
+    height: 435px;
+        z-index: 999;
+    
+  }
+
+  .container {
+      margin-top: 150px;
+  }
+
+  @media  screen and (min-width: 1600px) {
+    .topImage {
+        height: 164px;
+    }      
+}
+.countdownContainer {
+    z-index: 99;
+    width: 600px;
+}
+
+.countdownContainer h1 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--purple);
+}
+
+.countdownContainer p {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--text-color);
+}
+
+.item{
+    align-items: center;
+}
+
+.item span {
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--light-grey);
+}
+
+.item div {
+   font-weight: 400;
+   font-size: 72px;
+   color: var(--black);
+}
+
+.modal {
+
+    
+    position: absolute;
+    width: 500px;
+    height: 346px;
+    border-radius: 10px;
+    background: #ffffff;
+
+    z-index: 9999;
+}
+
+.modal form {
+    margin-top: 50px;
+}
+
+#closeModal {
+    text-decoration: none;
+    color: var(--light-grey);
+    margin: 5px;
+    transition: .1s cubic-bezier(.17,.67,.83,.67);
+}
+
+#closeModal:hover { 
+    color: var(--black);
+}
+
+.modalContainer {
+    position: fixed;
+    background-color: #323232a5;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modalContainer.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60, 0);
+    }
+     to {
+         opacity: 1;
+         transform: translate3d(0, 0, 0);
+     }
+}
+
+.active .modal{
+    animation: modal 500ms;
+}
